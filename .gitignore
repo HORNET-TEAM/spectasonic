@@ -51,3 +51,7 @@
 
 # Backup entities generated with doctrine:generate:entities command
 */Entity/*~
+
+# Ignore docker staff
+/docker/
+docker-compose.yml

@@ -1,0 +1,9 @@
+# Bien supprimer le dossier cache qui se recréé avec les commandes php app/console cache:clear sur le serveur
+# si rien ne fonctionne : service apache2 restart
+rm -rf var/cache/*
+rm -rf var/logs/*
+php bin/console cache:clear --env=dev
+php bin/console cache:clear --env=prod --no-debug
+chmod -R 777 var/cache
+chmod -R 777 var/logs
+chmod -R 777 var/cache/*
