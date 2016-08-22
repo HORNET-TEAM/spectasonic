@@ -55,3 +55,6 @@
 # Ignore docker staff
 /docker/
 docker-compose.yml
+
+#Bower
+/bower_components/

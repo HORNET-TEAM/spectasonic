@@ -7,3 +7,4 @@ php bin/console cache:clear --env=prod --no-debug
 chmod -R 777 var/cache
 chmod -R 777 var/logs
 chmod -R 777 var/cache/*
+chmod -R 777 var/sessions

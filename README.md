@@ -54,3 +54,7 @@ Note it's in order to show that you have last changes on your branch before comm
 :ballot_box_with_check: If it's all good, I merge into master your change and I deploy on production last changes.<br>
 
 Remember that you can do what you want, it's your branch, just a copy of master.
+
+## Other documentation
+
+* [SonataAdmin]('docs/sonata-admin.md')
