@@ -23,6 +23,14 @@ The project is a simple Symfony 3.1 project for Spectasonic project.
 2. You need to install Composer, dependancies manager of php package. Go here to install it by fallowing the instuctions here 
 : [Documentation install](https://getcomposer.org/download/)
 
+3. Make a `composer install` at the project root to install all the project with dependencies;
+
+4. Update the database in order to create the database mapping with this command at the project root:
+
+```
+    bin/console doctrine:schema:update --force
+```
+
 ## Work
 
 Git is a version control, five people on many and many source code file couldn't be injuries for them. :stuck_out_tongue_winking_eye:
@@ -57,4 +65,5 @@ Remember that you can do what you want, it's your branch, just a copy of master.
 
 ## Other documentation
 
-* [SonataAdmin]('docs/sonata-admin.md')
+* [Administration]('docs/sonata-admin.md')
+* [User]('docs/fos-user.md')

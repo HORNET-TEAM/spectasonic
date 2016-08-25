@@ -1,0 +1,18 @@
+# Kark/AdminBundle/Resources/config/admin.yml
+services:
+    specta.admin.admin.user:
+        class: AppBundle\Admin\UserAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Utilisateur, label: users }
+        arguments:
+            - ~
+            - AppBundle\Entity\User
+            - AppBundle:Admin\UserAdmin
+    specta.admin.admin.groupe:
+        class: AppBundle\Admin\GroupAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Groupe, label: groupes }
+        arguments:
+            - ~
+            - AppBundle\Entity\Group
+            - AppBundle:Admin\GroupAdmin
