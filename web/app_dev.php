@@ -14,7 +14,7 @@ $maxIp = ip2long('172.17.0.10');
 // Feel free to remove this, extend it, or make something more sophisticated.
 // I custom by remove this instruction in the condition '|| isset($_SERVER['HTTP_X_FORWARDED_FOR'])' because it's the header send by xdebug
 if (isset($_SERVER['HTTP_CLIENT_IP'])
-    || (!(in_array(@$_SERVER['REMOTE_ADDR'], array('127.0.0.1', 'fe80::1', '::1'))) AND !(($minIp <= $ip2longCli) && ($ip2longCli <= $maxIp)) )
+    || (!(in_array(@$_SERVER['REMOTE_ADDR'], array('127.0.0.1', '192.168.33.10', 'fe80::1', '::1'))) AND !(($minIp <= $ip2longCli) && ($ip2longCli <= $maxIp)) )
     	|| php_sapi_name() === 'cli-server'
 ) {
     header('HTTP/1.0 403 Forbidden');
