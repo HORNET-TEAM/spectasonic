@@ -44,6 +44,7 @@ class UserAdmin extends AbstractAdmin
                 ->with('General')
                 	->add('username', TextType::class, array('required' => true))
                     ->add('email', TextType::class, array('required' => true))
+                    ->add('plainPassword', 'text', array('required' => false))
                 ->end()
             ->end()
             ->tab('Security')

@@ -1,0 +1,326 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Actualités{% endblock title %}
+
+{% block stylesheets %}
+
+	<link rel="stylesheet" href="css/post.css">
+	<!--GOOGLE FONT OSWALD POUR TITRE -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+{% endblock stylesheets %}
+
+{% block body %}
+
+	<div class="container hidden-xs">
+        <!--BIG TITLE-->
+        <div class="row">
+            <h1 class="text-center"><a href="{{ path('index') }}" class="logo"></a></h1>
+        </div>
+        <!-- FIN BIG TITLE-->
+
+        <!--DEBUT POST-->
+        <div class="article">
+
+            <!--DEBUT VARIABLE IMAGE DU POST-->
+            <img src="img/post/testPost.jpg" width="100%"/>
+            <!--FIN VARIABLE IMAGE DU POST-->
+
+            <div class="article-content">
+
+                <!--DEBUT VARIABLE TITRE-->
+                <h2>Titre du post</h2>
+                <!--FIN VARIABLE TITRE-->
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+
+            </div>
+
+            <!-- SI GALLERIE DE PHOTO LANCER SLIDER DES PHOTOS-->
+
+            <!--DEBUT SLIDER-->
+            <div class="hidden-xs" id="jssor_1"
+                 style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden; visibility: hidden;">
+                <!-- Loading Screen -->
+                <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+                    <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                    <div style="position:absolute;display:block;background:url('img/slider/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+                </div>
+                <div data-u="slides"
+                     style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
+                    <div data-p="225.00" style="display: none;">
+                        <img data-u="image" src="img/slider/red.jpg"/>
+                        <div style="position: absolute; top: 30px; left: 30px; width: 480px; height: 120px; font-size: 50px; color: #ffffff; line-height: 60px;">
+                            TOUCH SWIPE SLIDER
+                        </div>
+                        <div style="position: absolute; top: 300px; left: 30px; width: 480px; height: 120px; font-size: 30px; color: #ffffff; line-height: 38px;">
+                            Build your slider with anything, includes image, content, text, html, photo, picture
+                        </div>
+                        <div data-u="caption" data-t="0"
+                             style="position: absolute; top: 100px; left: 600px; width: 445px; height: 300px;">
+                            <img style="position: absolute; top: 0px; left: 0px; width: 445px; height: 300px;"
+                                 src="img/slider/c-phone.png"/>
+                            <img data-u="caption" data-t="1"
+                                 style="position: absolute; top: 70px; left: 130px; width: 102px; height: 78px;"
+                                 src="img/slider/c-jssor-slider.png"/>
+                            <img data-u="caption" data-t="2"
+                                 style="position: absolute; top: 153px; left: 163px; width: 80px; height: 53px;"
+                                 src="img/slider/c-text.png"/>
+                            <img data-u="caption" data-t="3"
+                                 style="position: absolute; top: 60px; left: 220px; width: 140px; height: 90px;"
+                                 src="img/slider/c-fruit.png"/>
+                            <img data-u="caption" data-t="4"
+                                 style="position: absolute; top: -123px; left: 121px; width: 200px; height: 155px;"
+                                 src="img/slider/c-navigator.png"/>
+                        </div>
+                        <div data-u="caption" data-t="5"
+                             style="position: absolute; top: 120px; left: 650px; width: 470px; height: 220px;">
+                            <img style="position: absolute; top: 0px; left: 0px; width: 470px; height: 220px;"
+                                 src="img/slider/c-phone-horizontal.png"/>
+                            <div style="position: absolute; top: 4px; left: 45px; width: 379px; height: 213px; overflow: hidden;">
+                                <img data-u="caption" data-t="6"
+                                     style="position: absolute; top: 0px; left: 0px; width: 379px; height: 213px;"
+                                     src="img/slider/c-slide-1.jpg"/>
+                                <img data-u="caption" data-t="7"
+                                     style="position: absolute; top: 0px; left: 379px; width: 379px; height: 213px;"
+                                     src="img/slider/c-slide-3.jpg"/>
+                            </div>
+                            <img style="position: absolute; top: 4px; left: 45px; width: 379px; height: 213px;"
+                                 src="img/slider/c-navigator-horizontal.png"/>
+                            <img data-u="caption" data-t="8"
+                                 style="position: absolute; top: 740px; left: 1600px; width: 257px; height: 300px;"
+                                 src="img/slider/c-finger-pointing.png"/>
+                        </div>
+                    </div>
+                    <div data-p="225.00" style="display: none;">
+                        <img data-u="image" src="img/slider/purple.jpg"/>
+                    </div>
+                    <div data-p="225.00" data-po="80% 55%" style="display: none;">
+                        <img data-u="image" src="img/slider/blue.jpg"/>
+                    </div>
+                    <a data-u="add" href="http://www.jssor.com/demos/full-width-slider.slider" style="display:none">Full
+                        Width Slider</a>
+
+                </div>
+                <!-- Bullet Navigator -->
+                <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
+                    <!-- bullet navigator item prototype -->
+                    <div data-u="prototype" style="width:16px;height:16px;"></div>
+                </div>
+                <!-- Arrow Navigator -->
+                <span data-u="arrowleft" class="jssora22l" style="top:0px;left:12px;width:40px;height:58px;"
+                      data-autocenter="2"></span>
+                <span data-u="arrowright" class="jssora22r" style="top:0px;right:12px;width:40px;height:58px;"
+                      data-autocenter="2"></span>
+            </div>
+
+            <!--FIN SLIDER-->
+
+            <div class="article-content">
+
+                <!--DEBUT VARIABLE SOUS-TITRE-->
+                <h3>Supplément du post</h3>
+                <!--FIN VARIABLE SOUS-TITRE-->
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+
+            </div>
+
+        </div>
+        <!--FIN POST-->
+
+    </div>
+
+    <div class="container hidden-xs">
+        <div class="lines col-sm-5"></div>
+        <div class="line-title col-sm-2">Related posts</div>
+        <div class="lines col-sm-5"></div>
+    </div>
+
+    <div class="container hidden-xs">
+        <div class="col-lg-4 col-md-4 col-sm-6">
+
+            <div>
+                <img width="100%" src="img/post/testPost.jpg">
+            </div>
+
+            <div class="read" style="background-color:white; padding: 5px 30px;">
+
+                <h3>Gallery Post Type</h3>
+                <p style="font-weight:300; font-size:0.9em;">08 JAN 2014 | MOCKUP.PSD | <i class="fa fa-comments"></i>52
+                </p>
+                <p>Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non
+                    magna.
+                    Integer posuere erat a ante venenatis dapibus ...</p>
+
+                <p style="font-weight:300; font-size:0.9em;"><a href="#">CONTINUE READING →</a></p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6">
+
+            <div>
+                <img width="100%" src="img/post/testPost.jpg">
+            </div>
+
+            <div class="read" style="background-color:white; padding: 5px 30px;">
+
+                <h3>Gallery Post Type</h3>
+                <p style="font-weight:300; font-size:0.9em;">08 JAN 2014 | MOCKUP.PSD | <i class="fa fa-comments"></i>52
+                </p>
+                <p>Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non
+                    magna.
+                    Integer posuere erat a ante venenatis dapibus ...</p>
+
+                <p style="font-weight:300; font-size:0.9em;"><a href="#">CONTINUE READING →</a></p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6">
+
+            <div>
+                <img width="100%" src="img/post/testPost.jpg">
+            </div>
+
+            <div class="read" style="background-color:white; padding: 5px 30px;">
+
+                <h3>Gallery Post Type</h3>
+                <p style="font-weight:300; font-size:0.9em;">08 JAN 2014 | MOCKUP.PSD | <i class="fa fa-comments"></i>52
+                </p>
+                <p>Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non
+                    magna.
+                    Integer posuere erat a ante venenatis dapibus ...</p>
+
+                <p style="font-weight:300; font-size:0.9em;"><a href="#">CONTINUE READING →</a></p>
+            </div>
+        </div>
+        <!--FIN POST EN RELATION-->
+    </div>
+
+    <!--DEBUT TEST RESPONSIVE-->
+    <div class="hidden-lg hidden-md hidden-sm">
+        <!--BIG TITLE-->
+
+        <h1 class="text-center"><a href="index.php" class="logo"></a></h1>
+
+        <!-- FIN BIG TITLE-->
+
+        <!--DEBUT POST-->
+        <div class="article">
+
+            <!--DEBUT VARIABLE IMAGE DU POST-->
+            <img src="img/post/testPost.jpg" width="100%"/>
+            <!--FIN VARIABLE IMAGE DU POST-->
+
+            <div class="article-content">
+
+                <!--DEBUT VARIABLE TITRE-->
+                <h2>Titre du post</h2>
+                <!--FIN VARIABLE TITRE-->
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+
+            </div>
+
+
+            <div class="article-content">
+
+                <!--DEBUT VARIABLE SOUS-TITRE-->
+                <h3>Supplément du post</h3>
+                <!--FIN VARIABLE SOUS-TITRE-->
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+
+            </div>
+
+        </div>
+        <!--FIN POST-->
+
+
+        <div>
+            <div class="lines"></div>
+            <div class="line-title">Related posts</div>
+            <div class="lines"></div>
+        </div>
+
+
+        <!--DEBUT POSTS EN RELATION-->
+        <div class="article">
+
+            <!--DEBUT VARIABLE IMAGE DU POST-->
+            <img src="img/post/testPost.jpg" width="100%"/>
+            <!--FIN VARIABLE IMAGE DU POST-->
+
+            <div class="article-content">
+
+                <!--DEBUT VARIABLE TITRE-->
+                <h2>Titre du post</h2>
+                <!--FIN VARIABLE TITRE-->
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+
+
+            </div>
+        </div>
+
+        <div class="article">
+
+            <!--DEBUT VARIABLE IMAGE DU POST-->
+            <img src="img/post/testPost.jpg" width="100%"/>
+            <!--FIN VARIABLE IMAGE DU POST-->
+
+            <div class="article-content">
+
+                <!--DEBUT VARIABLE TITRE-->
+                <h2>Titre du post</h2>
+                <!--FIN VARIABLE TITRE-->
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--FIN POSTS EN RELATION-->
+
+    <!--FIN TEST RESPONSIVE-->
+
+{% endblock body %}
+
+{% block javascripts %}
+
+	<!--SLIDER-->
+    <script type="text/javascript" src="script/slider/jssor.slider-21.1.5.min.js"></script>
+    <script type="text/javascript" src="script/slider/slider.js"></script>
+
+{% endblock javascripts %}

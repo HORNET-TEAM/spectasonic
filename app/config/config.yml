@@ -86,3 +86,6 @@ fos_user:
     user_class: AppBundle\Entity\User
     group:
         group_class: AppBundle\Entity\Group
+    from_email:
+        address:        contact@mail-a-demander.com
+        sender_name:    Spectasonic Contact
