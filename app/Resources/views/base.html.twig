@@ -16,7 +16,7 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Inclusion des pages HTML -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
     {% block stylesheets %}{% endblock stylesheets %}
 </head>
 <body>
@@ -42,15 +42,30 @@
             <li>
                 <a href="#">Contact</a>
             </li>
+            {# Partie qui requiert des ACL (très minimaliste)#}
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                <li>
+                    <a href="{{ path('fos_user_profile_show')}}">
+                        Profile
+                    </a>
+                </li>
+            {% endif %}
             <li>
-                <a href="#">Se Connecter</a>
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    <a href="{{ path('fos_user_security_logout') }}">
+                        {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                    </a>
+                    {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+                {% else %}
+                    <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+                {% endif %}
             </li>
 
         </ul>
     </div>
     <!-- /Sidebar-->
     <!-- Page Content -->
-    
+
 
     <div id="page-content-wrapper">
         <a href="#menu-toggle" id="menu-toggle">
@@ -77,7 +92,7 @@
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 {% block javascripts %}{% endblock javascripts %}
-<script src="script/main.js"></script>
-<script src="script/sidebar/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+<script src="/script/main.js"></script>
+<script src="/script/sidebar/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </body>
 </html>
