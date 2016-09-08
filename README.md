@@ -51,7 +51,8 @@ To work on it, we have to do several things. Keep in mind it's not complicated, 
 1. We have to go to master with `git checkout master`;
 2. Get every change on it with `git pull origin master`;
 3. Then go back to your branch with `git checkout TeammateName/task-we-have-done`;
-4. Get all change on master branch which had done and merged before your changes with `git rebase master`
+4. Commit your change in order to allow the `rebase` next command;
+5. Get all change on master branch which had done and merged before your changes with `git rebase master`
 
 Note it's in order to show that you have last changes on your branch before commit with ;
 
