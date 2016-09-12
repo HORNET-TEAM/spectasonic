@@ -10,7 +10,7 @@
 
 #wrapper .logo {
     display: inline-block;
-    background: url(/asset/logocustom.png) center no-repeat;
+    background: url(/img/globals/logocustom.png) center no-repeat;
     background-size: 500px 100px;
     width: 500px;
     height: 100px;
