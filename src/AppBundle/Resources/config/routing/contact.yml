@@ -1,0 +1,4 @@
+contact_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Contact:new" }
+    methods:  [GET, POST]

@@ -1,0 +1,4 @@
+# list all actu
+actualites:
+    path:     /
+    defaults: { _controller: AppBundle:FrontController:actu }

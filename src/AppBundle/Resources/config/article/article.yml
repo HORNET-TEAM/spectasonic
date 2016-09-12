@@ -1,3 +1,0 @@
-# show_article:
-# 	path: /show/{id}
-# 	default: { _controller: AppBundle:FrontController:article }

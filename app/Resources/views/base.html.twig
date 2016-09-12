@@ -20,70 +20,40 @@
     {% block stylesheets %}{% endblock stylesheets %}
 </head>
 <body>
-<div id="wrapper" class="toggled">
-    <!-- Sidebar -->
-    <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <li>
-                <a href="{{ path('index') }}">Accueil</a>
-            </li>
-            <li>
-                <a href="#">SpectaShop</a>
-            </li>
-            <li>
-                <a href="{{ path('actualites') }}">Actualités</a>
-            </li>
-            <li>
-                <a href="#">Services</a>
-            </li>
-            <li>
-                <a href="#">Nos Valeurs</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
-            {# Partie qui requiert des ACL (très minimaliste)#}
-            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                <li>
-                    <a href="{{ path('fos_user_profile_show')}}">
-                        Profile
-                    </a>
-                </li>
+    <!-- page-content-wrapper -->
+    <div id="wrapper" class="toggled">
+        <!-- Sidebar -->
+            {% include 'menu.html.twig' %}
+        <!-- /Sidebar-->
+        <!-- Page Content -->
+
+        {# Bootstrap story start here, enjoy ! #}
+        <div class="container-fluid">
+
+            {# Toast fail or success display bofore body content #}
+            {% if app.session.flashBag.has('success') %}
+                <div class="alert alert-success">
+                    {% for msg in app.session.flashBag.get('success') %}
+                        {{ msg }}
+                    {% endfor %}
+                </div>
             {% endif %}
-            <li>
-                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                    <a href="{{ path('fos_user_security_logout') }}">
-                        {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
-                    </a>
-                    {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
-                {% else %}
-                    <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
-                {% endif %}
-            </li>
+            {% if app.session.flashBag.has('fail') %}
+                <div class="alert alert-warning">
+                    {% for msg in app.session.flashBag.get('fail') %}
+                        {{ msg }}
+                    {% endfor %}
+                </div>
+            {% endif %}
 
-        </ul>
+            {# body content below ! #}
+            {% block body %}{% endblock body %}
+        </div>
+
+        <!-- /Page Content -->
+
     </div>
-    <!-- /Sidebar-->
-    <!-- Page Content -->
-
-
-    <div id="page-content-wrapper">
-        <a href="#menu-toggle" id="menu-toggle">
-            <span>Menu</span>
-            <button type="button" class="navbar-toggle collapsed" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </a>
-    </div>
-
-    {% block body %}{% endblock body %}
-
-</div>
 <!-- /#page-content-wrapper -->
-
 
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
