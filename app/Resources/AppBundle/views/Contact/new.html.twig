@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Contact creation</h1>
+
+    {{ form_start(form, { 'attr' : {'class' : 'form-contact form-horizontal'}}) }}
+        <div class="form-group">
+            {# Null value = not override value #}
+            {{ form_label(form.name, null, { 'label_attr' : {'class' : 'control-label col-sm-2'}}) }}
+            <div class="col-sm-10">
+                {{ form_widget(form.name, { 'attr' : {'class' : 'form-control'}}) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {# Null value = not override value #}
+            {{ form_label(form.email, null, { 'label_attr' : {'class' : 'control-label col-sm-2'}}) }}
+            <div class="col-sm-10">
+                {{ form_widget(form.email, { 'attr' : {'class' : 'form-control'}}) }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            {# Null value = not override value #}
+            {{ form_label(form.subject, null, { 'label_attr' : {'class' : 'control-label col-sm-2'}}) }}
+            <div class="col-sm-10">
+                {{ form_widget(form.subject, { 'attr' : {'class' : 'form-control'}}) }}
+            </div>
+        </div>
+
+        <div class="form-group">
+            {# Null value = not override value #}
+            {{ form_label(form.body, null, { 'label_attr' : {'class' : 'control-label col-sm-2'}}) }}
+            <div class="col-sm-10">
+                {{ form_widget(form.body, { 'attr' : {'class' : 'form-control'}}) }}
+            </div>
+        </div>
+        <input type="submit" class="btn btn-success pull-right" value="Send !" />
+    {{ form_end(form) }}
+
+{% endblock %}

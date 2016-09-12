@@ -1,12 +1,12 @@
 
-index:
+app_index:
     path:     /
     defaults: { _controller: AppBundle:FrontController:index }
 
 actualites:
-    path:     /actualites
-    defaults: { _controller: AppBundle:FrontController:actu }
+    resource: "@AppBundle/Resources/config/routing/actu.yml"
+    prefix:     /actualite
 
-article:
-    resource: "@AppBundle/Resources/config/article/article.yml"
-    prefix:     /article
+contact:
+    resource: "@AppBundle/Resources/config/routing/contact.yml"
+    prefix:     /contact
