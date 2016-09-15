@@ -39,6 +39,10 @@
 # Assets managed by Bower
 /web/assets/vendor/
 
+#ElFinder assets
+/web/assets/
+/components
+
 # PHPUnit
 /app/phpunit.xml
 /phpunit.xml

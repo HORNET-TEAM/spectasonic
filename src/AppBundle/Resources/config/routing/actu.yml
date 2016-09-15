@@ -1,4 +1,15 @@
 # list all actu
 actualites:
+    path:     /example/show
+    defaults: { _controller: AppBundle:Actualite:actu }
+    methods:  GET
+
+actualite_index:
     path:     /
-    defaults: { _controller: AppBundle:FrontController:actu }
+    defaults: { _controller: "AppBundle:Article:index" }
+    methods:  GET
+
+actualite_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:Actualite:show" }
+    methods:  GET
