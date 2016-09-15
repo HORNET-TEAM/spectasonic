@@ -11,9 +11,4 @@ class FrontControllerController extends Controller
         return $this->render('AppBundle:Front:index.html.twig');
     }
 
-    public function actuAction()
-    {
-        return $this->render('AppBundle:Front:actu.html.twig');
-    }
-
 }

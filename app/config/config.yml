@@ -89,3 +89,38 @@ fos_user:
     from_email:
         address:        contact@mail-a-demander.com
         sender_name:    Spectasonic Contact
+
+fm_elfinder:
+    # assets_path: /web/assets V5
+    instances:
+        default:
+            relative_path: false
+            locale: %locale%
+            editor: ckeditor
+            fullscreen: true
+            theme: smoothness
+            include_assets: true
+            path_prefix: http://spectasonic.local/
+            connector:
+                debug: false
+                roots:
+                    uploads:
+                        show_hidden: false # defaults to false
+                        driver: LocalFileSystem
+                        path: uploads/default/actualite
+                        url: uploads/default/actualite
+                        upload_allow: ['image/png', 'image/jpg', 'image/jpeg', 'application/pdf','application/vnd.openxmlformats-officedocument.wordprocessingml.document','application/msword']
+                        upload_deny: ['all']
+                        upload_max_size: 5M
+
+ivory_ck_editor:
+    default_config: default
+    configs:
+        default:
+            toolbar: [ [ 'Preview' ], [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ], [ 'Find','Replace','-','SelectAll','-','SpellChecker', 'Scayt' ], [ 'Source' ], [ "About" ], "/", [ 'Bold','Italic','Underline','Strike', 'Blockquote','Subscript','Superscript','-','RemoveFormat' ], [ 'NumberedList','BulletedList','-','Outdent','Indent','-','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock' ], [ 'Link','Unlink','Anchor' ], [ 'pbckcode', 'Image', 'Video', 'Table','SpecialChar','Iframe' ], '/', [ 'Styles', 'Format','Font','FontSize' ], [ 'TextColor','BGColor' ], [ 'RemoveFormat' ], [ 'Maximize' ], ['ShowBlocks','-','About' ] ]
+            extraAllowedContent: 'source [*]{*}(*);' # Extend content with this.
+            allowedContent: true # ALlow to not strip class and other attribut
+            filebrowserBrowseRoute:     elfinder
+            filebrowserBrowseRouteParameters:
+                instance: default
+            toolbar:                    [ [ 'RemoveFormat' ], [ 'Maximize' ] ]

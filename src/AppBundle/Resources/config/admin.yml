@@ -16,3 +16,11 @@ services:
             - ~
             - AppBundle\Entity\Group
             - AppBundle:Admin\GroupAdmin
+    specta.admin.admin.actu:
+        class: AppBundle\Admin\ActualiteAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Actu, label: actus }
+        arguments:
+            - ~
+            - AppBundle\Entity\Actualite
+            - AppBundle:Admin\ActualiteAdmin

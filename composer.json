@@ -30,7 +30,9 @@
         "incenteev/composer-parameter-handler": "^2.0",
         "sonata-project/admin-bundle" : "3.4.0",
         "sonata-project/doctrine-orm-admin-bundle":"3.0.5",
-        "friendsofsymfony/user-bundle": "2.0.x-dev"
+        "friendsofsymfony/user-bundle": "2.0.x-dev",
+        "egeloen/ckeditor-bundle": "^4.0",
+        "helios-ag/fm-elfinder-bundle": "~6"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
@@ -64,5 +66,8 @@
         "incenteev-parameters": {
             "file": "app/config/parameters.yml"
         }
+    },
+    "config": {
+        "component-dir": "web/assets"
     }
 }
