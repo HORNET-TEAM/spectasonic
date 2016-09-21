@@ -2,16 +2,10 @@
 
 {% block title %}Actualités{% endblock title %}
 
-{% block stylesheets %}
-
-	<link rel="stylesheet" href="css/post.css">
-	<!--GOOGLE FONT OSWALD POUR TITRE -->
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-
-{% endblock stylesheets %}
 
 {% block body %}
 
+{% block post_content %}
 	<div class="container hidden-xs">
         <!--BIG TITLE-->
         <div class="row">
@@ -138,7 +132,8 @@
 
         </div>
         <!--FIN POST-->
-
+{% endblock post_content %}
+{% block posts_list %}
     </div>
 
     <div class="container hidden-xs">
@@ -315,12 +310,6 @@
 
     <!--FIN TEST RESPONSIVE-->
 
+{% endblock posts_list %}
+
 {% endblock body %}
-
-{% block javascripts %}
-
-	<!--SLIDER-->
-    <script type="text/javascript" src="script/slider/jssor.slider-21.1.5.min.js"></script>
-    <script type="text/javascript" src="script/slider/slider.js"></script>
-
-{% endblock javascripts %}

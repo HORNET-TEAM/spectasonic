@@ -1,0 +1,35 @@
+{# Cette vue rend la liste des news, une pagination est à prévoir #}
+
+{% extends "::base.html.twig" %}
+
+
+{% block title %}Actualités{% endblock title %}
+
+
+{% block body %}
+
+{% block posts_list %} 
+	<h1>Actualites</h1>
+	{% for actu in actus %}
+	    <table>
+	        <tbody>
+	            <tr>
+	                <th>Id</th>
+	                <td>{{ actu.id }}</td>
+	            </tr>
+	            <tr>
+	                <th>Title</th>
+	                <td>{{ actu.title }}</td>
+	            </tr>
+	            <tr>
+	                <th>Author</th>
+	                <td>{{ actu.author }}</td>
+	            </tr>
+	        </tbody>
+	    </table>
+	{% else %}
+		Pas d'actualités récente
+	{% endfor %}
+{% endblock posts_list %}
+
+{% endblock body %}
