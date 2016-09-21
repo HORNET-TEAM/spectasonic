@@ -38,7 +38,6 @@ class Actualite
     /**
      * @var string
      *
-     * @ORM\Column(name="author", type="string", length=255)
     * @ORM\ManyToOne(targetEntity="\AppBundle\Entity\User", inversedBy="actus")
      */
     private $author;
@@ -50,6 +49,20 @@ class Actualite
      */
     private $published;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="updated_at", type="datetime")
+     */
+    private $updatedAt;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="created_at", type="datetime")
+     */
+    private $createdAt;
 
     /**
      * Get id
@@ -134,4 +147,28 @@ class Actualite
         return $this->published;
     }
 
+
+    /**
+     * Set author
+     *
+     * @param \AppBundle\Entity\User $author
+     *
+     * @return Actualite
+     */
+    public function setAuthor(\AppBundle\Entity\User $author)
+    {
+        $this->author = $author;
+
+        return $this;
+    }
+
+    /**
+     * Get author
+     *
+     * @return string
+     */
+    public function getAuthor()
+    {
+        return $this->author;
+    }
 }

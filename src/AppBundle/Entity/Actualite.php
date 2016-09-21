@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table(name="actualite")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\ActualiteRepository")
+ * @ORM\HasLifecycleCallbacks
  */
 class Actualite
 {
@@ -49,6 +50,26 @@ class Actualite
      */
     private $published;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="updated_at", type="datetime")
+     */
+    private $updatedAt;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="created_at", type="datetime")
+     */
+    private $createdAt;
+
+    /**
+     * @var string
+     * TODO : date de publication, à la contrib de géré la publication des sarticle
+     */
+    // private $publishedDateBegin;
 
     /**
      * Get id
@@ -156,5 +177,58 @@ class Actualite
     public function getAuthor()
     {
         return $this->author;
+    }
+
+    /**
+     * Set updatedAt
+     *
+     * @param \DateTime $updatedAt
+     *
+     * @ORM\PreUpdate()
+     * @ORM\PrePersist()
+     *
+     * @return Actualite
+     */
+    public function setUpdatedAt()
+    {
+        $this->updatedAt = new \DateTime('now');
+
+        return $this;
+    }
+
+    /**
+     * Get updatedAt
+     *
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+
+
+    /**
+     * Get createdAt
+     *
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+    /**
+     * Set createdAt
+     *
+     * @param \DateTime $updatedAt
+     *
+     * @ORM\PrePersist()
+     *
+     * @return Actualite
+     */
+    public function setCreatedAt()
+    {
+        $this->createdAt = new \DateTime('now');
+
+        return $this;
     }
 }
