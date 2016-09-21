@@ -11,6 +11,7 @@ use Sonata\AdminBundle\Show\ShowMapper;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Ivory\CKEditorBundle\Form\Type\CKEditorType;
 
 class ActualiteAdmin extends Admin
@@ -19,8 +20,11 @@ class ActualiteAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
+            ->add('published', CheckboxType::class, array('required' => false))
             ->add('title', TextType::class, array('label' => 'Titre de l\'actualite'))
             ->add('author', 'entity', array('class' => 'AppBundle\Entity\User'))
+            ->add('createdAt', DateTimeType::class, array('disabled' => true))
+            ->add('updatedAt', DateTimeType::class, array('disabled' => true))
             ->add('content', CKEditorType::class, array (
                 'label'             => 'Contenu',
                 'config' => array(
@@ -44,6 +48,7 @@ class ActualiteAdmin extends Admin
     {
         $listMapper
             ->addIdentifier('title')
+            ->add('published')
             ->add('author')
             ->add('_action', 'actions', array(
                 'actions' => array(
