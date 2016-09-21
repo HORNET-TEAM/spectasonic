@@ -16,7 +16,10 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Inclusion des pages HTML -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/post.css') }}">
+    <!--GOOGLE FONT OSWALD POUR TITRE -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link rel="stylesheet" href="/css/post.css">
     <!--GOOGLE FONT OSWALD POUR TITRE -->
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
@@ -65,8 +68,12 @@
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 {% block javascripts %}{% endblock javascripts %}
-<script src="/script/main.js"></script>
-<script src="/script/sidebar/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+<script src="{{ asset('script/main.js') }}"></script>
+<script src="{{ asset('script/sidebar/modernizr-2.8.3-respond-1.4.2.min.js') }}"></script>
+
+<!--SLIDER ACTU-->
+<script type="text/javascript" src="script/slider/jssor.slider-21.1.5.min.js"></script>
+<script type="text/javascript" src="script/slider/slider.js"></script>
 
 <!--SLIDER ACTU-->
 <script type="text/javascript" src="script/slider/jssor.slider-21.1.5.min.js"></script>
