@@ -13,3 +13,129 @@
     	</a>
     </p>
 </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-md-3" id="tuileperso" onclick="changeSize()">
+      <a href="#" class="thumbnail" id="tuile1" style="height: 15em; text-align: center;">
+        <span class="glyphicon glyphicon-user" aria-hidden="true" style="margin-top: 5em;"></span>
+        <h4>Mes informations personnelles</h4>
+      </a>
+    </div>
+    <div class="col-xs-6 col-md-3" id="tuileperso" onclick="changeSize()">
+      <a href="#" class="thumbnail" id="tuile1" style="height: 15em; text-align: center;">
+        <span class="glyphicon glyphicon-stats" aria-hidden="true" style="margin-top: 5em;"></span>
+        <h4>Customer Service</h4>
+      </a>
+    </div>
+    <div class="col-xs-6 col-md-3" id="tuileperso" onclick="changeSize()">
+      <a href="#" class="thumbnail" id="tuile1" style="height: 15em; text-align: center;">
+        <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" style="margin-top: 5em;"></span>
+        <h4>Historique de commande</h4>
+      </a>
+    </div>
+    <div class="col-xs-6 col-md-3" id="tuileperso" onclick="changeSize()">
+      <a href="#" class="thumbnail" id="tuile1" style="height: 15em; text-align: center;">
+        <span class="glyphicon glyphicon-envelope" aria-hidden="true" style="margin-top: 5em;"></span>
+        <h4>Contact</h4>
+      </a>
+    </div>
+</div>
+
+<div class="row" id="contentinfoperso" >
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <div class="list-group-item">
+      <h2 style="text-align: center; font-weight: bold;">Mes informations personnelles</h2>
+      <h5 style="text-align: center; font-style: italic; color: red;">Les champs obligatoires sont marqués avec le symbole *</h5>
+      <h4>Civilité :*</h4>
+      <label class="radio-inline">
+        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Madame
+      </label>
+      <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Monsieur
+      </label>
+      <div class="form-group">
+        <label for="exampleInputName2">Nom*</label>
+          <input type="text" class="form-control" id="exampleInputName2" placeholder="Nom">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputName2">Prénom*</label>
+          <input type="text" class="form-control" id="exampleInputName2" placeholder="Prénom">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputName2">Email*</label>
+          <input type="email" class="form-control" id="exampleInputEmail2" placeholder="email@example.com">
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3"></div>
+</div>
+
+<div class="row" id="contentcustomer" >
+  <div class="jumbotron">
+    <h1>Customer Services</h1>
+    <p>Bienvenu sur votre nouvelle fonctionnalité, « Customer Service » ! Cette dernière vous offre un espace spécifique, dans le cadre de l’univers de la garantie, pour surveiller et manager votre matériel !</p>
+  </div>
+
+  <div class="col-lg-4">
+    <h3 style="font-weight: bold;">Mon matériel :</h3>
+    <img src="http://placehold.it/200x200">
+    <p>Nom : Spectalizer III</p>
+    <p>Puissance : 400W</p>
+    <p>Rapport signal bruit : 100 dB</p>
+    <p>Réponse en fréquence : de 20 à 20 000Hz</p>
+  </div>
+
+
+  <div class="col-lg-8">
+    <h4>Température :</h4>
+    <div class="progress">
+      <div class="progress-bar progress-bar-success progress-bar-striped" style="width: 60%">
+        <span class="sr-only">35% Complete (success)</span>
+      </div>
+      <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%">
+        <span class="sr-only">20% Complete (warning)</span>
+      </div>
+      <div class="progress-bar progress-bar-danger progress-bar-striped" style="width: 20%">
+        <span class="sr-only">10% Complete (danger)</span>
+      </div>
+    </div>
+    <h4>Humidité :</h4>
+    <div class="progress">
+      <div class="progress-bar progress-bar-success progress-bar-striped" style="width: 60%">
+        <span class="sr-only">35% Complete (success)</span>
+      </div>
+      <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%">
+        <span class="sr-only">20% Complete (warning)</span>
+      </div>
+      <div class="progress-bar progress-bar-danger progress-bar-striped" style="width: 20%">
+        <span class="sr-only">10% Complete (danger)</span>
+      </div>
+    </div>
+    <h4>Vibration :</h4>
+    <div class="progress">
+      <div class="progress-bar progress-bar-success progress-bar-striped" style="width: 60%">
+        <span class="sr-only">35% Complete (success)</span>
+      </div>
+      <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%">
+        <span class="sr-only">20% Complete (warning)</span>
+      </div>
+      <div class="progress-bar progress-bar-danger progress-bar-striped" style="width: 20%">
+        <span class="sr-only">10% Complete (danger)</span>
+      </div>
+    </div>
+    <h4>Hall Sensor :</h4>
+    <div class="progress">
+      <div class="progress-bar progress-bar-success progress-bar-striped" style="width: 60%">
+        <span class="sr-only">35% Complete (success)</span>
+      </div>
+      <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%">
+        <span class="sr-only">20% Complete (warning)</span>
+      </div>
+      <div class="progress-bar progress-bar-danger progress-bar-striped" style="width: 20%">
+        <span class="sr-only">10% Complete (danger)</span>
+      </div>
+    </div>
+  </div>
+</div>
