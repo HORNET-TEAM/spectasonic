@@ -89,6 +89,9 @@ fos_user:
     from_email:
         address:        contact@mail-a-demander.com
         sender_name:    Spectasonic Contact
+    profile:
+        form:
+            type: AppBundle\Form\FOSUser\ProfilUserType
 
 fm_elfinder:
     # assets_path: /web/assets V5
