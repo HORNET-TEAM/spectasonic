@@ -1,0 +1,5 @@
+# list all actu
+about_us_show:
+    path:     /show
+    defaults: { _controller: AppBundle:AboutUs:show }
+    methods:  GET
