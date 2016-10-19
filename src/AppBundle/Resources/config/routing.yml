@@ -10,3 +10,8 @@ actualites:
 contact:
     resource: "@AppBundle/Resources/config/routing/contact.yml"
     prefix:     /contact
+
+
+about_us:
+    resource: "@AppBundle/Resources/config/routing/about_us.yml"
+    prefix:     /about-us
