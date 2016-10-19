@@ -1,8 +1,47 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 {{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
+
+	<div class="row" id="contentinfoperso" >
+	  <div class="col-md-3"></div>
+	  <div class="col-md-6">
+	    <div class="list-group-item">
+	      <h5 style="text-align: center; font-style: italic; color: red;">Les champs obligatoires sont marqués avec le symbole *</h5>
+	      <h4>{{ form_label(form.gender) }}</h4>
+	      {{ form_widget(form.gender, {'attr' : {'class' :'radio-inline', 'placeholder' : 'Nom' }} ) }}
+
+	      <div class="form-group">
+	        {{ form_label(form.username) }}
+          	{{ form_widget(form.username, {'attr' : {'class' :'form-control', 'placeholder' : 'Pseudonyme' }} ) }}
+	      </div>
+
+	      <div class="form-group">
+	        {{ form_label(form.firstname) }}
+          	{{ form_widget(form.firstname, {'attr' : {'class' :'form-control', 'placeholder' : 'Nom' }} ) }}
+	      </div>
+
+	      <div class="form-group">
+	        {{ form_label(form.lastname) }}
+          	{{ form_widget(form.lastname, {'attr' : {'class' :'form-control', 'placeholder' : 'Prénom' }} ) }}
+	      </div>
+
+	      <div class="form-group">
+	        {{ form_label(form.email) }}
+          	{{ form_widget(form.email, {'attr' : {'class' :'form-control', 'placeholder' : 'Email' }} ) }}
+	      </div>
+
+			<div class="pull-right">
+		        <a class="btn btn-default" href="{{ path('fos_user_profile_show') }}">
+		        	Retour au profile
+		        </a>
+
+		        <input type="submit" class="btn btn-default" value="{{ 'profile.edit.submit'|trans }}" />
+		    </div>
+
+	    </div>
+	  </div>
+	  <div class="col-md-3"></div>
+	</div>
+
     {{ form_widget(form) }}
-    <div>
-        <input type="submit" value="{{ 'profile.edit.submit'|trans }}" />
-    </div>
 {{ form_end(form) }}
