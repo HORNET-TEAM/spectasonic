@@ -15,3 +15,7 @@ contact:
 about_us:
     resource: "@AppBundle/Resources/config/routing/about_us.yml"
     prefix:     /about-us
+
+service:
+    resource: "@AppBundle/Resources/config/routing/service.yml"
+    prefix:     /service

@@ -1,0 +1,5 @@
+# list all actu
+service_show:
+    path:     /show
+    defaults: { _controller: AppBundle:Service:show }
+    methods:  GET
