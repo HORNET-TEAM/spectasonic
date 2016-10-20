@@ -9,12 +9,12 @@ use Symfony\Component\Config\Definition\Exception\Exception;
 use AppBundle\Entity\Actu;
 
 /**
- * Aboutus controller.
+ * Service controller.
  *
  */
-class AboutUsController extends Controller
+class ServiceController extends Controller
 {
 	public function showAction() {
-		return $this->render('AppBundle:AboutUs:show.html.twig');
+		return $this->render('AppBundle:Service:show.html.twig');
 	}
 }

@@ -3,31 +3,50 @@
 <div id="sidebar-wrapper">
     <ul class="sidebar-nav">
             <li>
-                <a href="{{ path('app_index') }}">Accueil</a>
+                <a href="{{ path('app_index') }}">{{ 'accueil'|title }}</a>
             </li>
             <li>
-                <a href="#">SpectaShop</a>
+                <a href="#">
+                    {{ 'spectashop'|title }}
+                </a>
             </li>
             <li>
-                <a href="{{ path('actualites') }}">Actualités</a>
+                <a href="{{ path('actualites') }}">
+                    {{ 'actualités'|title }}
+                </a>
             </li>
             <li>
-                <a href="#">Services</a>
+                <a href="{{ path('service_show') }}">
+                    {{ 'nos services'|title }}
+                </a>
             </li>
             <li>
-                <a href="{{ path('about_us_show') }}">Nos Valeurs</a>
-            </li>
+                <a href="{{ path('about_us_show') }}">
+                    {{ 'nos valeurs'|title }}
+                </a>
             <li>
-                <a href="{{ path('contact_new') }}">Contact</a>
+                <a href="{{ path('contact_new') }}">
+                    {{ 'contact'|title }}
+                </a>
             </li>
             {# Partie qui requiert des ACL (très minimaliste)#}
             {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                 <li>
                     <a href="{{ path('fos_user_profile_show')}}">
-                        Profile
+                        {{ 'profile'|title }}
                     </a>
                 </li>
+
+                {# Partie qui requiert des ACL (très minimaliste)#}
+                {% if is_granted("ROLE_ADMIN") %}
+                    <li>
+                        <a href="{{ path('sonata_admin_dashboard') }}">
+                            {{ 'administration'|title }}
+                        </a>
+                    </li>
+                {% endif %}
             {% endif %}
+
             {# Toggle login/logout #}
             <li>
                 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
@@ -39,14 +58,6 @@
                     <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
                 {% endif %}
             </li>
-            {# Partie qui requiert des ACL (très minimaliste)#}
-            {% if is_granted("ROLE_ADMIN") %}
-                <li>
-                    <a href="{{ path('sonata_admin_dashboard') }}">
-                        Administration
-                    </a>
-                </li>
-            {% endif %}
 
     </ul>
  </div>
